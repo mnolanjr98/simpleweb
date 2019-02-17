@@ -1,0 +1,6 @@
+docker build -t mnolan98/simpleweb .
+docker run -p 8080:8080 mnolan98/simpleweb
+docker run --rm -p 8080:8080 mnolan98/simpleweb
+docker run --name local-simpleweb -p 8080:8080 mnolan98/simpleweb
+docker start -a local-simpleweb
+docker cp local-simpleweb:/root/.npm/_logs/2019-02-17T15_50_37_583Z-debug.log debug.log
